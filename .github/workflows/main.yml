@@ -1,0 +1,22 @@
+name: Context Demo
+
+on: push
+
+env:
+  name: "hanna"
+
+jobs:
+  context-info:
+    runs-on: ubuntu-latest
+    env:
+      address: "karnataka"
+    steps:
+      - name: Step 1
+        env:
+         phone: "9072389742"
+        run: |
+          echo "the name is $name"
+          echo "the adress is $address"
+          echo "the adress is $phone"
+          echo "GitHub Ref: ${{ github.ref }}"
+          echo "Runner OS: ${{ runner.os }}"
