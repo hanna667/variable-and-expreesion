@@ -20,3 +20,4 @@ jobs:
           echo "the adress is $phone"
           echo "GitHub Ref: ${{ github.ref }}"
           echo "Runner OS: ${{ runner.os }}"
+          echo "job status: ${{ job.status }}"
